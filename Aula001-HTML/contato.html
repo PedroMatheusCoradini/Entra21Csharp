@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <img src="img/entra.png" width="180px">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="empresa.html">Empresa</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+            <a href="Cadastro.html">Cadastro</a>
+        </nav>
+    </center>
+    
+    <form action="enviaemail.cs" method="get" enctype="multipart/form-data">
+        <label>Nome: </label>
+        <input type="text" name="nome" value="Pedro" placeholder="Informe seu nome completo">
+
+        <label>E-mail: </label>
+        <input type="email" name="email" value="pedro@gmail.com" required>
+
+        <select name="estado">
+            <option value="">Selecione o estado</option>
+            <option value="SC" selected>Santa Catarina</option>
+            <option value="PR">Parana</option>
+            <option value="RS">Rio Grande do Sul</option>
+        </select>
+
+        <input type="datetime-local">
+
+        <label>Sexo</label>
+        <span>
+            <input type="radio" name="sexo" checked value="M"> Masculino
+            <input type="radio" name="sexo" value="F"> Feminino
+        </span>
+
+        <label>Comidas</label>
+        <input type="checkbox" name="comida" checked value="Lasanha"> Lasanha
+        <input type="checkbox" name="comida" checked value="Pizza"> Pizza
+        <input type="checkbox" name="comida" value="Arroz"> Arroz
+        <input type="checkbox" name="comida" value="Feijao"> Feijão
+
+        <label>Senha: </label>
+        <input type="password" name="senha" minlength="8" maxlength="12">
+
+        <label for="">Foto</label>
+        <input type="file" name="foto" multiple>
+
+        <textarea name="" required></textarea>
+
+        <input type="hidden" name="codigoIbge" value="1058483">
+
+        <button type="submit">Enviar</button>
+        
+        <input type="reset" name="enviar" value="Cancelar">
+    </form>
+
+</body>
+
+</html>
