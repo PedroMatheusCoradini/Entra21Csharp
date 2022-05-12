@@ -1,0 +1,30 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    background: #a00000;
+}
+
+.logoSite {
+    float: left;
+    width: 150px;
+}
+
+nav a {
+    display: block;
+    width: auto;
+    height: 56px;
+    padding: 4px;
+    float: left;
+    line-height: 53px;
+    color: #ffff;
+    text-decoration: none;
+}
