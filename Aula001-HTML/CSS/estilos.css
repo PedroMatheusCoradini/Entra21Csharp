@@ -1,12 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;700&family=Macondo&display=swap');
 
+@import url('icofont.min.css');
+
+html{
+    overflow-y: scroll;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 *{
     font-family: 'Dosis', sans-serif;
+}
+
+body{
+    background: pink;
+}
+
+body.pageServico{
+    background: unset;
+}
+
+body.pageServico video{
+    position: fixed;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    /* opacity: 0.7; */
+
+}
+
+body.pageEmpresa {
+    background: url('../img/CeuBrasilia (1).jpg') no-repeat center fixed;
+    background-size: 100vw;
+
 }
 
 nav {
@@ -16,6 +48,21 @@ nav {
     width: 100%;
     height: 55px;
     background: #a00000;
+}
+
+body.pageServico nav{
+    background: #000;
+}
+
+body.pageServico .lente{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    opacity: 0.7;
+    z-index: -1;
 }
 
 .logoSite {
@@ -53,6 +100,9 @@ main {
     box-shadow: 7px 7px 9px -2px rgb(0 0 0 / 74%);
     padding: 15px;
     display: inline-block;
+    float: left;
+    min-height: 250px;
+    /* display: inline-block; */
 }
 
 .homeArticle img {
@@ -71,18 +121,26 @@ main {
 .homeArticle p {
     font-style: italic;
     text-indent: 20px;
+    min-height: 80px;
 }
 
 .homeArticle a {
+    width: 100px;
     display: inline-block;
-    width: auto;
+    position: relative;
+    /* float: right; */
     padding: 4px;
-    background: red;
-    color: #fff;
+    /* text-align: center; */
     text-decoration: none;
+    color: #fff;
+    background: red;
     border-radius: 5px;
-    float: right;
     transition: 0.15s padding ease-out, 0.15s border-radius ease-out, 0.15s border ease-out;
+    left: 0;
+    /* left: 50%;
+    margin-left: -50px; */
+    text-align: center;
+    bottom: -5px;
 }
 
 .homeArticle.active{
@@ -95,4 +153,90 @@ main {
     padding: 6px;
     border-radius: 15px;
     transition: 0.15s padding ease-out, 0.15s border-radius ease-out;
+}
+
+/* estilos carosel */
+.carousel{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    text-align: center;
+    background: red; /*/ apagar /*/
+}
+
+.carousel li{
+    width: 22%;
+    margin-left: 1%;
+    margin-right: 1%;
+    list-style: none;
+    display: inline-block;
+    position: inherit;
+}
+
+.carousel li img {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: relative;
+}
+
+/* pagina serviços */
+
+body.pageServico table{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+body.pageServico table td{
+    background: #fff;
+    padding: 4px;
+    border: 0;
+}
+
+body.pageServico table tr:nth-child(odd) td {
+    background: rgb(64, 64, 59);
+}
+
+body.pageServico table tr.titulo td{
+    background: red!important;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+/* estilos footer */
+footer{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    background:rgba(126, 7, 41, 0.74)
+}
+
+footer span{
+    display: inline-block;
+    width: 48%;
+    padding: 10px;
+    color: #fff;
+}
+
+footer .assinatura{
+    /* color:#a00000; */
+    text-align: right;
+}
+
+footer .assinatura a{
+    color: red;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+footer .assinatura a:hover{
+    text-decoration: underLine;
+    background: url('../img/oculos.png') left no-repeat;
+    background-size: 15%;
 }

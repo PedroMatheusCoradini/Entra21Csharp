@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/contato.css">
     <title>Document</title>
 </head>
 
 <body>
     <center>
-        <img src="img/entra.png" width="180px">
+        <!-- <img src="img/entra.png" width="180px"> -->
         <nav>
             <a href="index.html">Home</a>
             <a href="empresa.html">Empresa</a>
@@ -20,53 +21,70 @@
             <a href="Cadastro.html">Cadastro</a>
         </nav>
     </center>
-    
+
     <form action="enviaemail.cs" method="get" enctype="multipart/form-data">
-        <label>Nome: </label>
-        <input type="text" name="nome" value="Pedro" placeholder="Informe seu nome completo">
+        <div class="pageContainer">
+            <div class="pageNomes">
+                <label>Nome: </label>
+                <input type="text" name="nome" placeholder="Informe seu nome completo">
+                <label>Sobrenome: </label>
+                <input type="text" placeholder="Informe seu sobrenome">
+            </div>
 
-        <label>E-mail: </label>
-        <input type="email" name="email" value="pedro@gmail.com" required>
+            <div class="email">
+                <label>E-mail: </label>
+                <input type="email" name="email" placeholder="Informe seu E-mail" required>
+            </div>
 
-        <select name="estado">
-            <option value="">Selecione o estado</option>
-            <option value="SC" selected>Santa Catarina</option>
-            <option value="PR">Parana</option>
-            <option value="RS">Rio Grande do Sul</option>
-        </select>
+            <div class="pageEstadoENascimento">
+                <label>Estado</label>
+                <select name="estado">
+                    <option value="">Selecione o estado</option>
+                    <option value="SC" selected>Santa Catarina</option>
+                    <option value="PR">Parana</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </select>
+                <label>Data de nascimento</label>
+                <input type="datetime-local">
+            </div>
 
-        <input type="datetime-local">
+            <div class="sexoEFoto">
+                <label>Sexo</label>
+                <span>
+                    <input class="masc" type="radio" name="sexo" checked value="M"> Masculino
+                    <input class="fem" type="radio" name="sexo" value="F"> Feminino
+                </span>
 
-        <label>Sexo</label>
-        <span>
-            <input type="radio" name="sexo" checked value="M"> Masculino
-            <input type="radio" name="sexo" value="F"> Feminino
-        </span>
+                <label for="">Foto</label>
+                <input type="file" name="foto" multiple>
+            </div>
 
-        <label>Comidas</label>
-        <input type="checkbox" name="comida" checked value="Lasanha"> Lasanha
-        <input type="checkbox" name="comida" checked value="Pizza"> Pizza
-        <input type="checkbox" name="comida" value="Arroz"> Arroz
-        <input type="checkbox" name="comida" value="Feijao"> Feijão
+            <div class="setor">
+                <label>Setor</label>
+                <input type="checkbox" name="comida" checked value="TI"> TI
+                <input type="checkbox" name="comida" value="Industrial"> Industrial
+                <input type="checkbox" name="comida" value="Marketing"> Marketing
+            </div>
+        </div>
 
-        <label>Senha: </label>
-        <input type="password" name="senha" minlength="8" maxlength="12">
+        <div class="pageTextArea">
+            <label>Sua Mensagem</label>
+            <textarea name="" required></textarea>
+        </div>
+        </div>
 
-        <label for="">Foto</label>
-        <input type="file" name="foto" multiple>
-
-        <textarea name="" required></textarea>
-
-        <input type="hidden" name="codigoIbge" value="1058483">
-
-        <button type="submit">Enviar</button>
-        
-        <input type="reset" name="enviar" value="Cancelar">
+        <div class="divBotao">
+            <input type="hidden" name="codigoIbge" value="1058483">
+    
+            <button type="submit">Enviar</button>
+            <input type="reset" name="enviar" value="Cancelar">
+        </div>
     </form>
 
     <footer>
         <span class="direitos">2022 &copy; todos os direitos reservados</span>
-        <span class="assinatura">Feito por <a href="http://www.agenciamanadah.com.br" target="_blank">Pedro Matheus</a></span>
+        <span class="assinatura">Feito por <a href="http://www.agenciamanadah.com.br" target="_blank">Pedro
+                Matheus</a></span>
     </footer>
 
 </body>

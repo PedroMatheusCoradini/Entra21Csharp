@@ -1,0 +1,135 @@
+body form{
+    background: rgb(208, 183, 183);
+    width: 40%;
+    margin: 7% auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 9px rgb(0 0 0 / 74%);
+}
+
+div.pageContainer {
+    /* background: rgb(108, 101, 101); */
+    width: 100%;
+    margin-left: 2%;
+}
+
+body form label{
+    margin-top: 2%;
+    display: block;
+}
+
+div.pageNomes label {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgb(176, 129, 129);
+}
+
+div.pageNomes input {
+    border-radius: 10px;
+    padding: 10px;
+    background: bisque;
+}
+
+div.email label {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(176, 129, 129);
+}
+
+div.email input {
+    padding: 10px;
+    border-radius: 10px;
+    background: bisque;
+}
+
+div.pageEstadoENascimento label {
+    display: inline-block;
+    padding: 10px;
+    background: rgb(176, 129, 129);
+    border-radius: 10px;
+}
+
+div.pageEstadoENascimento select {
+    padding: 10px;
+    border-radius: 10px;
+    background: bisque;
+}
+
+div.pageEstadoENascimento select option {
+    background: bisque;
+}
+
+div.pageEstadoENascimento label{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div.pageEstadoENascimento input {
+    padding: 10px;
+    border-radius: 10px;
+    background: bisque;
+}
+
+div.sexoEFoto label {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background:rgb(176, 129, 129)
+}
+
+div.sexoEFoto span {
+    margin-right: 10px;
+    background: rgb(121, 121, 214);
+    border-radius: 7px;
+    padding: 7px;
+}
+
+div.sexoEFoto input {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(176, 129, 129);
+}
+
+div.setor label{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    width: 30px;
+    background: rgb(176, 129, 129);
+}
+
+div.setor.inputCheckBox {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(176, 129, 129);
+}
+
+div.pageTextArea {
+    width: auto;
+}
+
+div.pageTextArea label {
+    padding: 10px;
+    margin-left: 13px;
+    width: 100px;
+    background: rgb(176, 129, 129);
+    border-radius: 10px;
+}
+
+div.pageTextArea textarea{
+    margin: 5px 10px;
+    display: inline-block;
+    padding: 100px 20%;
+    padding-right: 70px;
+    padding-right: 355px;
+}
+
+div.divBotao {
+    /* background: bisque; */
+    margin-left: 10px;
+}
+
+div.divBotao button {
+    margin-right: 80%;
+}

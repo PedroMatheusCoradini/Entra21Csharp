@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1280px;
+    display: flex;
+    background: gray;
+    min-height: 500px;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* align-items: baseline; */
+    justify-content: flex-start;
+}
+
+.coluna {
+    width: 20%;
+    max-height: 240px;
+    /* height: 150px; */
+}
+
+.coluna.red {
+    background: red;
+}
+
+.coluna.yellow {
+    background: yellow;
+}
+
+.coluna.blue {
+    background: blue;
+}
