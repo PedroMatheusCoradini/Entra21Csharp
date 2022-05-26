@@ -1,0 +1,98 @@
+diretório com arquivos das aulas link > https://drive.google.com/drive/folders/1LTdP81f9e8eaDXjyNGY5zn97NmiQE-gr?usp=sharing
+
+:)
+
+EXERCÍCIOS DE ALGORÍTMOS
+
+1. Escreva um algoritmo que receba 2 números e exiba o resultado da sua soma.
+
+valor1 = 10
+valor2 = 15
+
+escreva valor1 + valor2
+
+---------------------------------------------------
+
+2. Escreva um algoritmo que receba 2 números e ao final exiba o resultado da subtração,
+multiplicação e divisão dos números lidos.
+
+valor1 = 10
+valor2 = 15
+
+escreva "subtração" + valor1 - valor2
+escreva "multiplicação + valor1 * valor2
+escreva "divisão" + valor1 / valor2
+
+------------------------------------------------------------
+
+3. Escreva um algoritmo que receba o ano atual, ano de
+nascimento de uma pessoa e mostre a sua idade. 
+
+------------------------------------------------------------
+
+4. O Sr. João necessita saber o consumo médio de um automóvel, e solicitou para você
+desenvolver um algoritmo que sendo fornecido a distancia total percorrida pelo automóvel e o
+total de combustível gasto, mostrar o consumo do automóvel.
+
+-----------------------------------------------------------
+
+5. Escreva um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas
+efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão
+sobre suas vendas efetuadas, informar o seu nome, o salário fixo e o salário no final do mês.
+
+-------------------------------------------------------
+
+6. A loja ELETROMOVEIS esta vendendo os seus produtos no cartão em 5 vezes sem juros, Faça
+um algoritmo que receba o valor da compra e mostre o valor das parcelas. 
+
+----------------------------------------------------------
+
+7. faça um algorítimo que calcule o valor de uma fatura onde:
+foram feitas X ligações (mínimo 5)
+cada ligação terá x minutos (valores diferentes para cada chamada)
+o valor / minuto é X
+resultado deverá ser o valor da fatura
+
+
+--------------------------------------------------------------------
+
+8. faça um algorítimo para calcular o valor total de uma parcela de financiamento onde:
+o valor financiado é X
+o valor de parcelas escolhidas é X
+o valor da taxa de juros é X
+
+x é um valor aleatório
+
+exiba o valor de cada parcela
+
+-------------------------------------------------------------------
+
+9. faça um algorítimo para calcular o desperdício de água de uma torneira
+sabemos que um minuto tem 60 segundos, uma hora tem 3.600 segundos
+uma gota cai a cada 3 segundos e tem 2 ml de água.
+
+calcule quantos litros de água foram desperdiçados em 3 horas.
+
+
+-------------------------------------------------------------------
+
+
+10.  Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit.
+A fórmula de conversão é: F=(9*C+160)/5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.	
+
+------------------------------------------------------------
+
+Elaborar um algoritmo que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). 
+O algoritmo deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.
+
+-----------------------------------------------------------------
+
+Faça um algoritmo que receba um valor que foi depositado e exiba o valor com rendimento após um mês. 
+Considere fixo o juro da poupança em 0,70% a. m
+exiba o saldo após 12 meses de rendimento.	
+
+
+-----------------------------------------------------------------------
+
+Faça um algoritmo que receba o preço de custo de um produto e mostre o valor de venda.
+Sabe-se que o preço de custo receberá um acréscimo de acordo com um percentual informado pelo usuário	
