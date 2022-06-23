@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=ClinicaMedica
+comment1.params=
+comment1.target=ClinicaMedica()
+comment10.params=pacRg
+comment10.target=Paciente\ buscarPacienteRg(java.lang.String)
+comment11.params=dia\ mes\ ano
+comment11.target=Consulta\ buscaConsultaData(byte,\ byte,\ byte)
+comment12.params=cHora
+comment12.target=Consulta\ buscarConsultaHora(java.lang.String)
+comment2.params=
+comment2.target=java.util.ArrayList\ getListaDeMedicos()
+comment3.params=
+comment3.target=java.util.ArrayList\ getListaDePacientes()
+comment4.params=
+comment4.target=java.util.ArrayList\ getListaDeConsultas()
+comment5.params=consulta
+comment5.target=void\ marcarConsulta(Consulta)
+comment6.params=medico
+comment6.target=void\ cadastrarMedico(Medico)
+comment7.params=p
+comment7.target=void\ cadastrarPaciente(Paciente)
+comment8.params=data
+comment8.target=double\ calcularTotalEmCaixa(Data)
+comment9.params=medico
+comment9.target=Medico\ buscarMedico(java.lang.String)
+numComments=13

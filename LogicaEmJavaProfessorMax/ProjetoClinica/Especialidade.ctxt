@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Especialidade
+comment1.params=especialidade
+comment1.target=void\ setEspecialidade(java.lang.String)
+comment2.params=valorConsulta
+comment2.target=void\ setValorConsulta(double)
+comment3.params=
+comment3.target=java.lang.String\ getEspecialidade()
+comment4.params=
+comment4.target=double\ getValorConsulta()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
