@@ -8,11 +8,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TodoTestLoginRegister.Data;
 using TodoTestLoginRegister.Models;
+using Microsoft.AspNetCore.Identity;
+using TodoTestLoginRegister.ViewModels;
 
 namespace TodoTestLoginRegister.Controllers
 {
-    [Authorize]
     //[AllowAnonymous] permite que o metodo n precise de autorizacao
+    [Authorize]
     public class TodoController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -26,7 +28,10 @@ namespace TodoTestLoginRegister.Controllers
         public async Task<IActionResult> Index()
         {
             return _context.Todos != null ?
-                        View(await _context.Todos.ToListAsync()) :
+                        View(await _context.Todos
+                        .AsNoTracking()
+                        .Where(x => x.User == User.Identity.Name)
+                        .ToListAsync()) :
                         Problem("Entity set 'ApplicationDbContext.Todos'  is null.");
         }
 
@@ -38,9 +43,13 @@ namespace TodoTestLoginRegister.Controllers
                 return NotFound();
             }
 
-            var todo = await _context.Todos
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var todo = await _context.Todos.FirstOrDefaultAsync(m => m.Id == id);
             if (todo == null)
+            {
+                return NotFound();
+            }
+
+            if (todo.User != User.Identity.Name)
             {
                 return NotFound();
             }
@@ -59,15 +68,23 @@ namespace TodoTestLoginRegister.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Done,CreateAt,LastUpdateDate,User")] Todo todo)
+        public async Task<IActionResult> Create([Bind("Id,Title,Done,CreateAt,LastUpdateDate,User")] UserViewModel todo) // 
         {
+            Todo todo2 = new Todo
+            {
+                Id = todo.Id,
+                Title = todo.Title,
+                CreateAt = DateTime.Now
+            };
+
             if (ModelState.IsValid)
             {
-                _context.Add(todo);
+                todo2.User = User.Identity.Name;
+                _context.Add(todo2);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(todo);
+            return View(todo2);
         }
 
         // GET: Todo/Edit/5
@@ -83,6 +100,10 @@ namespace TodoTestLoginRegister.Controllers
             {
                 return NotFound();
             }
+
+            if (todo.User != User.Identity.Name)
+                return NotFound();
+
             return View(todo);
         }
 
@@ -91,7 +112,7 @@ namespace TodoTestLoginRegister.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Done,CreateAt,LastUpdateDate,User")] Todo todo)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Done,CreateAt")] Todo todo) // ,CreateAt,LastUpdateDate,User
         {
             if (id != todo.Id)
             {
@@ -102,6 +123,10 @@ namespace TodoTestLoginRegister.Controllers
             {
                 try
                 {
+                    var todos = await _context.Todos.AsNoTracking().FirstOrDefaultAsync(x => x.Id == todo.Id);
+
+                    todo.User = User.Identity.Name;
+                    todo.CreateAt = todos.CreateAt;
                     _context.Update(todo);
                     await _context.SaveChangesAsync();
                 }
@@ -135,6 +160,9 @@ namespace TodoTestLoginRegister.Controllers
             {
                 return NotFound();
             }
+
+            if (todo.User != User.Identity.Name)
+                return NotFound();
 
             return View(todo);
         }

@@ -8,11 +8,11 @@ using TodoTestLoginRegister.Data;
 
 #nullable disable
 
-namespace TodoTestLoginRegister.Data.Migrations
+namespace TodoTestLoginRegister.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220930134300_CreateTodoTable")]
-    partial class CreateTodoTable
+    [Migration("20221004112006_sqliteUpdate")]
+    partial class sqliteUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
