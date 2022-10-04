@@ -41,7 +41,11 @@ namespace TodoTestLoginRegister.Migrations
                     TwoFactorEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
                     LockoutEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
-                    AccessFailedCount = table.Column<int>(type: "INTEGER", nullable: false)
+                    AccessFailedCount = table.Column<int>(type: "INTEGER", nullable: false),
+                    CPF = table.Column<string>(type: "TEXT", maxLength: 11, nullable: true),
+                    NomeCompleto = table.Column<string>(type: "TEXT", maxLength: 256, nullable: false),
+                    Adress = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    CEP = table.Column<string>(type: "TEXT", maxLength: 20, nullable: true)
                 },
                 constraints: table =>
                 {
